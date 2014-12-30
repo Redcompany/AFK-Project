@@ -58,7 +58,7 @@
 					ex) 20150101</td>
 			</tr>
 			<tr height="80">
-				<td colspan="2" align="center"><input type="submit"
+				<td colspan="2" align="center"><input type="submit" name="todo"
 					value="회원가입"></td>
 				</form>
 
