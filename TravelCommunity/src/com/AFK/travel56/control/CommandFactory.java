@@ -7,7 +7,7 @@ public class CommandFactory {
 
 		switch (pathName) {
 		case "/":
-			target = new RegisterMemberCommand();
+			target = new HomeCommand();
 			break;
 		case "/testRegister":
 			target = new RegisterMemberCommand();
@@ -15,6 +15,8 @@ public class CommandFactory {
 		case "/home":
 			target = new HomeCommand();
 			break;
+		case "/continentArticle":
+			target = new ContinentArticleCommand();
 		}
 
 		return target;

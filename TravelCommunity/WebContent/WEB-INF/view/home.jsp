@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE>
 <html lange="ko">
 <head>
@@ -14,6 +15,12 @@
 	text-align: center;
 }
 </style>
+
+	<form name="checkoutForm"
+		action="<c:url value='/action/continentArticle'/>" method="POST">
+		<input type="checkbox" name="continent" value="유럽">유럽 <input
+			type="submit" value="Checkout">
+	</form>
 	<table boder="1" width="1050" height="800" align="center">
 		<tr>
 			<td>
@@ -429,8 +436,7 @@
 				</table>
 			</td>
 		</tr>
-
-
 	</table>
+
 </body>
 </html>

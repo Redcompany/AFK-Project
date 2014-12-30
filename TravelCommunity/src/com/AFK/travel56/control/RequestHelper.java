@@ -25,7 +25,6 @@ public class RequestHelper {
 		System.out.println("Request URI : " + request.getRequestURI());
 		
 		target = CommandFactory.createCommand(request.getPathInfo());
-		System.out.println(target);
 		return target;		
 	}
 
