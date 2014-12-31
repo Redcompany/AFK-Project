@@ -195,7 +195,6 @@ th.totalboard {
     font-family:fantasy;
     text-align:left;
     font-size:50px;
-    5totalboardtbluewhite3s2
 }
 a.button1 {
     padding: 0;
@@ -309,3 +308,83 @@ td.welcome {
         font-family: fantasy;
     
 }
+
+a.recommandbutton1 {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+a.revisebutton1 {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+a.removebutton1 {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+a.listbutton1 {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+}
+
+td.membership {
+        font-size: 60px;
+        font-weight:900;
+        font-family: fantasy;
+    
+}
+
+a.cancel {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 13px 18px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 15px;
+}
+
+a.rename {
+    padding: 0;
+    font-weight: bold;
+    background-color: skyblue;
+    color: white;
+    padding: 13px 18px;
+    text-decoration: none;
+    border-radius: 4px 4px 4px 4px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
