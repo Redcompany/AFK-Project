@@ -15,6 +15,9 @@ public class CommandFactory {
 		case "/home":
 			target = new HomeCommand();
 			break;
+		case "/FindIDPassword":
+			target = new IDPasswordFindMemberCommand();
+			break;
 		case "/continentArticle":
 			target = new ContinentArticleCommand();
 		}
