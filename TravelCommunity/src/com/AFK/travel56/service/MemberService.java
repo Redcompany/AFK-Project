@@ -31,8 +31,8 @@ public class MemberService {
 
 	// 회원 가입
 	public boolean registerMember(String memberID, String memberPW,
-			String memberGender, String memberEmail, String address, String memberName,
-			String memberBirth, String memberNickName) {
+			String memberGender, String memberEmail, String address,
+			String memberName, String memberBirth, String memberNickName) {
 		boolean genderCheck;
 		String totalEmail;
 		if (memberGender.equals("man")) {
@@ -40,7 +40,7 @@ public class MemberService {
 		} else {
 			genderCheck = false;
 		}
-		totalEmail=memberEmail+"@"+address;
+		totalEmail = memberEmail + "@" + address;
 		int stateCheck = memberDAO.addMember(memberID, memberPW, genderCheck,
 				totalEmail, memberName, memberBirth, memberNickName);
 
@@ -120,4 +120,23 @@ public class MemberService {
 		return false;
 	}
 
+	public boolean findMemberID(String memberName, String memberBirth,
+			String memberNickname) {
+		MemberVO findMember = memberDAO.findMemberByNameBirthNickname(
+				memberName, memberBirth, memberNickname);
+		if (findMember != null) {
+			return true;
+		}
+		return false;
+	}
+
+	public boolean findMemberPassword(String memberID, String memberName,
+			String memberBirth) {
+		MemberVO findMember = memberDAO.findMemberByIDNameBirth(memberID,
+				memberName, memberBirth);
+		if (findMember != null) {
+			return true;
+		}
+		return false;
+	}
 }
