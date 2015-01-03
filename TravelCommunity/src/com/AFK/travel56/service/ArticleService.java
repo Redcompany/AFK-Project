@@ -81,5 +81,5 @@ public class ArticleService {
 	public List<ArticleVO> showBestArticleByContinent(String continent) {
 		return articleDAO.findBestArticleByContinent(continent);
 	}
-
+	
 }
