@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE>
-<html lange="ko">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>AFK_trable56에 온 것을 환영해요~</title>
@@ -21,6 +21,9 @@
 		<input type="checkbox" name="continent" value="유럽">유럽 <input
 			type="submit" value="Checkout">
 	</form>
+
+	<a class="login" href="testRegister">로그인</a>
+
 	<table boder="1" width="1050" height="800" align="center">
 		<tr>
 			<td>

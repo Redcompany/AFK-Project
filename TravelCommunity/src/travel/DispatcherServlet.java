@@ -35,7 +35,6 @@ public class DispatcherServlet extends HttpServlet {
 			 * "/WEB-INF/view/error.jsp"의 호출을 고민해볼 것
 			 */
 		}		
-			
 	}
 	
 	protected void sendContent(HttpServletRequest request,
@@ -48,7 +47,6 @@ public class DispatcherServlet extends HttpServlet {
 		out.println(commandResult.getContent());
 		out.close();
 	}
-	
 	
 	/** dispatcher method */
 	protected void dispatch(HttpServletRequest request,
@@ -70,5 +68,4 @@ public class DispatcherServlet extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		processRequest(request, response); 
 	}
-
 }

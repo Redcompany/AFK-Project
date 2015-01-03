@@ -12,10 +12,9 @@ public class HomeCommand implements Command {
 		CommandResult commandResult = null;
 		String todoCheck = request.getParameter("todo");
 		if (todoCheck != null) {
-			MemberService memberService = new MemberService();
 			switch (todoCheck) {
-
 			case "회원가입":
+				MemberService memberService = new MemberService();
 				request.setAttribute("addMember", memberService.registerMember(
 						request.getParameter("id"),
 						request.getParameter("pass"),
@@ -26,32 +25,7 @@ public class HomeCommand implements Command {
 						request.getParameter("birth"),
 						request.getParameter("nickname")));
 				break;
-			case "ID찾기":
-				request.setAttribute("findID", memberService.findMemberID(
-						request.getParameter("name"),
-						request.getParameter("birth"),
-						request.getParameter("nickname")));
-				System.out.println(memberService.findMemberID(
-						request.getParameter("name"),
-						request.getParameter("birth"),
-						request.getParameter("nickname")));
-				break;
-			case "Password찿기":
-				request.setAttribute(
-						"findPassword",
-						memberService.findMemberPassword(
-								request.getParameter("id"),
-								request.getParameter("name"),
-								request.getParameter("birth")));
-				System.out.println(memberService.findMemberPassword(
-						request.getParameter("id"),
-						request.getParameter("name"),
-						request.getParameter("birth")));
-				System.out.println(request.getParameter("name"));
-
-				break;
 			}
-
 		}
 		commandResult = new CommandResult("/WEB-INF/view/home.jsp");
 		return commandResult;
