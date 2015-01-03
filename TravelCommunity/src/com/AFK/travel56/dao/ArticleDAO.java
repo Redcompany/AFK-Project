@@ -13,6 +13,7 @@ public interface ArticleDAO {
 	public List<ArticleVO> findBestArticleByContinent(String continent);
 
 	public ArticleVO showSelectArticle(int articleNumber);
+	
 
 	public int addArticle(String title, String continent, String country,
 			String content, int memberNumber, String memberNickName);
