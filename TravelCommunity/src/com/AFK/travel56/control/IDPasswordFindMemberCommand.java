@@ -10,7 +10,6 @@ public class IDPasswordFindMemberCommand implements Command {
 		throws javax.servlet.ServletException, java.io.IOException {
 			CommandResult commandResult = new CommandResult(
 					"/WEB-INF/view/FindIDPassword.jsp");
-			
 
 			return commandResult;
 		}

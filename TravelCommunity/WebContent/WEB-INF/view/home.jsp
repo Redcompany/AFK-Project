@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE>
-<html lange="ko">
+<html lang="ko">
 <head>
 <meta charset="UTF-8">
 <title>AFK_trable56에 온 것을 환영해요~</title>
@@ -18,9 +18,10 @@
 
 	<form name="checkoutForm"
 		action="<c:url value='/action/continentArticle'/>" method="POST">
-		<input type="checkbox" name="continent" value="유럽">유럽 <input
-			type="submit" value="Checkout">
+		<input type="checkbox" name="continent" value="유럽">유럽
+		<input type="submit" value="Checkout">
 	</form>
+	
 	<table boder="1" width="1050" height="800" align="center">
 		<tr>
 			<td>
