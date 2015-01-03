@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset=UTF-8">
+<meta charset="UTF-8">
 <title>대륙게시판입니다.</title>
 </head>
 <body>
@@ -37,7 +37,20 @@
 					type="hidden" name="cartIndex"
 					value="<%=findArticle.getMemberNumber()%>">
 				<td>"<%=findArticle.getArticleNumber()%></td>
-				<td><%=findArticle.getArticleTitle()%></td>
+				<td>
+					<form name="testform" action="<c:url value='/action/readArticle'/>"
+						method="POST">
+						<input type="checkbox" name="test"
+							value="<%=findArticle.getArticleNumber()%>"><%=findArticle.getArticleTitle()%><input
+							type="submit" value="Checkout">
+					</form>
+				</td>
+
+
+
+
+
+
 				<td><%=findArticle.getMemberNickName()%></td>
 				<td align="right"><%=findArticle.getArticleRecommendCount()%></td>
 				<td align="right"><%=findArticle.getArticleViewCount()%></td>

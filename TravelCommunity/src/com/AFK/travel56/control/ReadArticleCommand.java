@@ -6,21 +6,23 @@ import javax.servlet.http.HttpSession;
 
 import com.AFK.travel56.service.ArticleService;
 
-public class ContinentArticleCommand implements Command {
+public class ReadArticleCommand implements Command {
 	public CommandResult execute(HttpServletRequest request,
 			HttpServletResponse response)
 			throws javax.servlet.ServletException, java.io.IOException {
 		
 		CommandResult commandResult = new CommandResult(
-				"/WEB-INF/view/continentArticle.jsp");
+				"/WEB-INF/view/readArticle.jsp");
 		
 		HttpSession session = request.getSession(true);
 		
 		ArticleService articleService = new ArticleService();
 		
 		session.setAttribute("continentArticle", articleService
-				.showAllArticleByContinent(request.getParameter("continent")));
-
+				.selectShowArticle(Integer.parseInt(request.getParameter("test"))));
+		
+		System.out.println(Integer.parseInt(request.getParameter("articleNumber")));
+		
 		return commandResult;
 	}
 }

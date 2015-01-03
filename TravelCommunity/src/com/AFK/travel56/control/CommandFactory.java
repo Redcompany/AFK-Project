@@ -9,20 +9,28 @@ public class CommandFactory {
 		case "/":
 			target = new HomeCommand();
 			break;
+			
 		case "/testRegister":
 			target = new RegisterMemberCommand();
 			break;
+			
 		case "/home":
 			target = new HomeCommand();
 			break;
+			
 		case "/FindIDPassword":
 			target = new IDPasswordFindMemberCommand();
 			break;
+			
 		case "/continentArticle":
 			target = new ContinentArticleCommand();
+			break;
+			
+		case "/readArticle":
+			target = new ReadArticleCommand();
+			break;
 		}
 
 		return target;
 	}
-
 }
