@@ -28,19 +28,20 @@
 			if (theArticles != null && theArticles.size() > 0) {
 
 				for (int i = 0; i < theArticles.size(); ++i) {
-					ArticleVO findAticle = theArticles.get(i);
+					ArticleVO findArticle = theArticles.get(i);
 		%>
 		<tr>
 			<form name="removeForm" action="<c:url value='/action/cart'/>"
 				method="POST">
 				<input type="hidden" name="todo" value="remove"> <input
 					type="hidden" name="cartIndex"
-					value="<%=findAticle.getMemberNumber()%>">
-				<td><%=findAticle.getArticleTitle()%></td>
-				<td><%=findAticle.getMemberNickName()%></td>
-				<td align="right">$<%=findAticle.getArticleRecommendCount()%></td>
-				<td align="right"><%=findAticle.getArticleViewCount()%></td>
-				<td><input type="submit" value="Remove from Shopping Cart"></td>
+					value="<%=findArticle.getMemberNumber()%>">
+				<td>"<%=findArticle.getArticleNumber()%></td>
+				<td><%=findArticle.getArticleTitle()%></td>
+				<td><%=findArticle.getMemberNickName()%></td>
+				<td align="right"><%=findArticle.getArticleRecommendCount()%></td>
+				<td align="right"><%=findArticle.getArticleViewCount()%></td>
+
 			</form>
 		</tr>
 		<%
