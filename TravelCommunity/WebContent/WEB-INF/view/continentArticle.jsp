@@ -1,12 +1,12 @@
 <%@page import="com.AFK.travel56.dao.ArticleVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<%@page session="true" import="java.util.*, travel.*"%>
+<%@page session="true" import="java.util.*, com.AFK.travel56.dao.*"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-<meta charset="UTF-8">
+<meta charset=UTF-8">
 <title>대륙게시판입니다.</title>
 </head>
 <body>
@@ -25,8 +25,6 @@
 		<%
 			List<ArticleVO> theArticles = (List<ArticleVO>) session
 					.getAttribute("continentArticle");
-
-			System.out.print(theArticles);
 			if (theArticles != null && theArticles.size() > 0) {
 
 				for (int i = 0; i < theArticles.size(); ++i) {
@@ -38,11 +36,11 @@
 				<input type="hidden" name="todo" value="remove"> <input
 					type="hidden" name="cartIndex"
 					value="<%=findAticle.getMemberNumber()%>">
-				<td><%=findAticle.getArticleNumber()%></td>
 				<td><%=findAticle.getArticleTitle()%></td>
 				<td><%=findAticle.getMemberNickName()%></td>
-				<td align="right"><%=findAticle.getArticleRecommendCount()%></td>
+				<td align="right">$<%=findAticle.getArticleRecommendCount()%></td>
 				<td align="right"><%=findAticle.getArticleViewCount()%></td>
+				<td><input type="submit" value="Remove from Shopping Cart"></td>
 			</form>
 		</tr>
 		<%

@@ -12,6 +12,7 @@ public class RegisterMemberCommand implements Command {
 			throws javax.servlet.ServletException, java.io.IOException {
 		CommandResult commandResult = new CommandResult(
 				"/WEB-INF/view/testRegister.jsp");
+		
 
 		return commandResult;
 	}
