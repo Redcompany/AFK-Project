@@ -48,7 +48,11 @@ public class HomeCommand implements Command {
 						request.getParameter("name"),
 						request.getParameter("birth")));
 				System.out.println(request.getParameter("name"));
-
+				break;
+			case "탈퇴":
+				request.setAttribute("deleteMember", memberService
+						.deleteMember(request.getParameter("id"),
+								request.getParameter("pass")));
 				break;
 			}
 

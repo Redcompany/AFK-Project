@@ -27,4 +27,5 @@ public interface MemberDAO {
 
 	public MemberVO findMemberByNameBirthNickname(String memberName,
 			String memberBirth, String memberNickname);
+
 }

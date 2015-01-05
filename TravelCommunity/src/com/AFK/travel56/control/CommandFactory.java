@@ -29,6 +29,14 @@ public class CommandFactory {
 		case "/readArticle":
 			target = new ReadArticleCommand();
 			break;
+			
+		case "/loginMember":
+			target = new LoginMemberCommand();
+			break;
+			
+		case "/updateMember":
+			target = new UpdateMemberCommand();
+			break;
 		}
 
 		return target;
